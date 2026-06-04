@@ -17,10 +17,19 @@
 
 .home-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr);
+  grid-template-columns: minmax(0, 1.4fr) minmax(18rem, 0.6fr);
   gap: 3.5rem;
-  align-items: center;
-  margin: 3.25rem 0 4.25rem;
+  align-items: start;
+  margin: 3.25rem 0 4rem;
+}
+
+.home-kicker {
+  margin: 0 0 0.55rem;
+  color: #c218b8;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .home-hero h1 {
@@ -39,7 +48,7 @@
 }
 
 .home-hero p {
-  max-width: 48rem;
+  max-width: 51rem;
   margin: 1.15rem 0;
   color: #222;
   font-size: 1.12rem;
@@ -47,9 +56,22 @@
 }
 
 .home-hero strong,
-.news-item strong,
-.highlight-grid strong {
+.news-item strong {
   font-weight: 700;
+}
+
+.home-hero a,
+.contact-grid a,
+.selected-pub-list a {
+  color: #c218b8;
+  text-decoration: none;
+}
+
+.home-hero a:hover,
+.contact-grid a:hover,
+.selected-pub-list a:hover {
+  color: #8f1086;
+  text-decoration: underline;
 }
 
 .home-hero__photo {
@@ -105,6 +127,36 @@
   gap: 1.45rem;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem 2.5rem;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1.35rem;
+}
+
+.contact-grid > div {
+  min-width: 0;
+  color: #222;
+  font-size: 1.03rem;
+  line-height: 1.5;
+}
+
+.contact-label {
+  display: block;
+  margin-bottom: 0.18rem;
+  color: #7a7a7a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contact-separator {
+  color: #aaa;
+  margin: 0 0.35rem;
+}
+
 .news-item {
   display: grid;
   grid-template-columns: 10rem minmax(0, 1fr);
@@ -126,40 +178,27 @@
   line-height: 1.58;
 }
 
-.highlight-grid {
+.selected-pub-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.1rem;
+  gap: 1.25rem;
 }
 
-.highlight-grid article {
-  border-top: 1px solid #d8d8d8;
-  padding-top: 1rem;
+.selected-pub-list article {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1.15rem;
 }
 
-.highlight-grid h3 {
-  margin: 0 0 0.55rem;
-  font-size: 1.05rem;
-  line-height: 1.35;
+.selected-pub-list h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.08rem;
+  line-height: 1.38;
 }
 
-.highlight-grid p,
-.selected-pubs {
+.selected-pub-list p {
+  margin: 0;
   color: #333;
   font-size: 0.98rem;
-  line-height: 1.55;
-}
-
-.highlight-grid p {
-  margin: 0;
-}
-
-.selected-pubs {
-  margin-left: 1.2rem;
-}
-
-.selected-pubs li + li {
-  margin-top: 0.85rem;
+  line-height: 1.5;
 }
 
 @media (max-width: 900px) {
@@ -174,7 +213,7 @@
     width: min(100%, 22rem);
   }
 
-  .highlight-grid {
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 }

@@ -9,36 +9,43 @@ redirect_from:
 
 <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
 
-<section class="home-hero">
+<section class="home-hero" id="about">
   <div class="home-hero__copy">
+    <p class="home-kicker">About</p>
     <h1>Jinghang Shi</h1>
     <p class="home-tagline">AI for Science | LLMs | AI Agents</p>
 
     <p>
-      I am a Ph.D. student at the University of Chinese Academy of Sciences, working on
-      <strong>AI for Science</strong>, <strong>large language models</strong>, and
-      <strong>multimodal foundation models</strong> for scientific discovery.
+      I am a Ph.D. student at the
+      <strong>National Astronomical Observatories, Chinese Academy of Sciences</strong>
+      and the <strong>University of Chinese Academy of Sciences</strong>, advised by
+      Prof. <a href="https://people.ucas.ac.cn/~zyx#%20184221">Yanxia Zhang</a>.
+      I am also a member of the Artificial Intelligence Working Group at NAOC.
     </p>
 
     <p>
-      My research builds AI systems that connect astronomical images, spectra, catalogs,
-      and natural-language reasoning. I am especially interested in evidence-grounded
-      scientific AI, multimodal model training, benchmark construction, and agentic
-      workflows for data-driven discovery.
+      My research focuses on <strong>AI for Science in astronomy</strong>. I develop
+      AI systems that can learn from, align, and reason over heterogeneous astronomical
+      data, including images, spectra, catalogs, and scientific text. Astronomy provides
+      a demanding testbed for building reliable AI methods: models must handle noisy
+      observations, sparse labels, large-scale surveys, and conclusions that should be
+      grounded in measurable physical evidence.
     </p>
 
     <p>
-      I am currently open to opportunities in <strong>LLM algorithms</strong>,
-      <strong>multimodal AI</strong>, <strong>AI agents</strong>, and
-      <strong>AI for Science</strong>.
+      My current work centers on <strong>large language models</strong>,
+      <strong>multimodal large language models</strong>, and <strong>AI agents</strong>
+      for astronomical research. I am interested in foundation-model training,
+      multimodal alignment, instruction data construction, scientific model evaluation,
+      and agentic workflows that help turn complex observations into interpretable
+      scientific reasoning.
     </p>
 
-    <div class="home-actions">
-      <a href="/publications/">Publications</a>
-      <a href="/cv/">CV</a>
-      <a href="mailto:shijinghang66@gmail.com">Email</a>
-      <a href="https://github.com/Shijinghang">GitHub</a>
-    </div>
+    <p>
+      I am currently open to research and engineering opportunities in
+      <strong>LLM algorithms</strong>, <strong>multimodal AI</strong>,
+      <strong>AI agents</strong>, and <strong>AI for Science</strong>.
+    </p>
   </div>
 
   <div class="home-hero__photo">
@@ -46,7 +53,34 @@ redirect_from:
   </div>
 </section>
 
-<section class="home-section">
+<section class="home-section" id="contact">
+  <h2>contact</h2>
+
+  <div class="contact-grid">
+    <div>
+      <span class="contact-label">Email</span>
+      <a href="mailto:shijinghang66@gmail.com">shijinghang66@gmail.com</a>
+    </div>
+    <div>
+      <span class="contact-label">Advisor</span>
+      <a href="https://people.ucas.ac.cn/~zyx#%20184221">Prof. Yanxia Zhang</a>
+    </div>
+    <div>
+      <span class="contact-label">Affiliation</span>
+      <span>NAOC, CAS · UCAS</span>
+    </div>
+    <div>
+      <span class="contact-label">Links</span>
+      <a href="https://github.com/Shijinghang">GitHub</a>
+      <span class="contact-separator">/</span>
+      <a href="https://www.researchgate.net/profile/Shi-Jinghang">ResearchGate</a>
+      <span class="contact-separator">/</span>
+      <a href="/cv/">CV</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-section" id="news">
   <h2>news</h2>
 
   <div class="news-list">
@@ -61,79 +95,54 @@ redirect_from:
     <div class="news-item">
       <time>2026</time>
       <p>
-        New ApJS paper:
-        <strong>Unveiling Quasars in Gaia DR3</strong>, a multimodal deep learning
-        framework for BP/RP quasar classification and redshift estimation.
+        Published <strong>Unveiling Quasars in Gaia DR3</strong> in
+        <em>The Astrophysical Journal Supplement Series</em>, focusing on multimodal
+        classification and redshift estimation for Gaia BP/RP sources.
       </p>
     </div>
 
     <div class="news-item">
       <time>2025</time>
       <p>
-        Built <strong>AstroMMBench</strong>, an astronomy multimodal benchmark with
-        MLLM-driven question generation, blind filtering, expert review, and systematic
-        evaluation of 25 VLMs.
-      </p>
-    </div>
-
-    <div class="news-item">
-      <time>2024-2025</time>
-      <p>
-        Worked on the <strong>AstroOne</strong> astronomy foundation model project,
-        including domain corpus construction, image-text data curation, VLM evaluation,
-        and CPT/SFT/DPO/GRPO training analysis.
+        Built <strong>AstroMMBench</strong>, an astronomy multimodal benchmark for
+        evaluating MLLM capabilities across visual understanding, domain knowledge, and
+        scientific reasoning.
       </p>
     </div>
   </div>
 </section>
 
-<section class="home-section">
-  <h2>research highlights</h2>
-
-  <div class="highlight-grid">
-    <article>
-      <h3>LLMs and AI Agents for Science</h3>
-      <p>
-        Evidence-grounded language models and agentic workflows that transform raw
-        scientific observations into interpretable reasoning traces and decisions.
-      </p>
-    </article>
-
-    <article>
-      <h3>Multimodal Foundation Models</h3>
-      <p>
-        Training and evaluation pipelines for astronomy VLMs, including instruction data,
-        multimodal benchmarks, preference optimization, and error analysis.
-      </p>
-    </article>
-
-    <article>
-      <h3>Large-Scale Scientific Data</h3>
-      <p>
-        TB-scale ETL, quality control, LMDB-backed data storage, and efficient training
-        datasets across images, spectra, catalogs, and text.
-      </p>
-    </article>
-  </div>
-</section>
-
-<section class="home-section">
+<section class="home-section" id="selected-publications">
   <h2>selected publications</h2>
 
-  <ul class="selected-pubs">
-    <li>
-      <strong>AstroSpecLM: A Spectrum-Language Model for Evidence-Grounded Astronomical Spectral Analysis</strong>,
-      manuscript under review, 2026.
-    </li>
-    <li>
-      <strong>Unveiling Quasars in Gaia DR3: Multimodal Classification and Redshift Estimation of BP/RP Sources with Deep Learning</strong>,
-      <em>The Astrophysical Journal Supplement Series</em>, 2026.
-    </li>
-    <li>
-      <strong>AstroMMBench: A Benchmark for Evaluating Multimodal Large Language Models Capabilities in Astronomy</strong>,
-      preprint, 2025.
-    </li>
-  </ul>
+  <div class="selected-pub-list">
+    <article>
+      <h3>
+        <a href="/publication/2026-05-26-astrospeclm">
+          AstroSpecLM: A Spectrum-Language Model for Evidence-Grounded Astronomical Spectral Analysis
+        </a>
+      </h3>
+      <p><strong>Jinghang Shi</strong>, and other collaborators. Manuscript under review, 2026.</p>
+    </article>
+
+    <article>
+      <h3>
+        <a href="/publication/2025-10-01-astrommbench">
+          AstroMMBench: A Benchmark for Evaluating Multimodal Large Language Models Capabilities in Astronomy
+        </a>
+      </h3>
+      <p><strong>Jinghang Shi</strong>, and collaborators. Preprint, 2025.</p>
+    </article>
+
+    <article>
+      <h3>
+        <a href="/publication/2026-03-01-gaia-dr3-quasar-bprp">
+          Unveiling Quasars in Gaia DR3: Multimodal Classification and Redshift Estimation of BP/RP Sources with Deep Learning
+        </a>
+      </h3>
+      <p><strong>Jing-Hang Shi</strong>, Yanxia Zhang, Changhua Li, and other collaborators. <em>The Astrophysical Journal Supplement Series</em>, 2026.</p>
+    </article>
+  </div>
 
   <p><a class="text-link" href="/publications/">View all publications</a></p>
 </section>
