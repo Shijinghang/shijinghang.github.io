@@ -1,0 +1,176 @@
+.pub-page {
+  margin-top: 0.25rem;
+}
+
+.pub-filter-row {
+  margin: 0 0 2.75rem;
+}
+
+.pub-filter-plus {
+  display: block;
+  margin: 0.25rem 0 2rem;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.pub-filter {
+  width: min(100%, 34rem);
+  border: 1px solid #111;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  line-height: 1.35;
+  background: #fff;
+}
+
+.pub-filter::placeholder {
+  color: #7f7f7f;
+}
+
+.pub-year-group {
+  margin-top: 2.5rem;
+}
+
+.pub-year-rule {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  border-top: 1px solid #e6e6e6;
+  padding-top: 1.4rem;
+}
+
+.pub-year-rule::before {
+  content: "";
+  flex: 1 1 auto;
+}
+
+.pub-year {
+  color: #dedede;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.pub-item {
+  display: grid;
+  grid-template-columns: 9.8rem minmax(0, 1fr);
+  gap: 2.2rem;
+  align-items: start;
+  margin: 2.2rem 0 3.1rem;
+}
+
+.pub-thumb-link {
+  display: block;
+  width: 9.8rem;
+}
+
+.pub-thumb {
+  display: block;
+  width: 9.8rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.13);
+  background: #f7f7f7;
+}
+
+.pub-thumb-fallback {
+  display: grid;
+  place-items: center;
+  color: #777;
+  font-size: 1.1rem;
+}
+
+.pub-body {
+  min-width: 0;
+}
+
+.pub-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.pub-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pub-title a:hover {
+  text-decoration: underline;
+}
+
+.pub-authors,
+.pub-venue {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.pub-authors {
+  color: #222;
+}
+
+.pub-venue {
+  color: #1f1f1f;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.pub-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.15rem;
+  min-height: 2rem;
+  border: 1px solid #111;
+  border-radius: 3px;
+  padding: 0.25rem 0.8rem;
+  color: #111;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.pub-links a:hover {
+  background: #111;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .pub-filter-row {
+    margin-bottom: 2rem;
+  }
+
+  .pub-year-rule {
+    gap: 1rem;
+  }
+
+  .pub-item {
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    gap: 1rem;
+    margin: 1.7rem 0 2.4rem;
+  }
+
+  .pub-thumb-link,
+  .pub-thumb {
+    width: 6.5rem;
+  }
+
+  .pub-title {
+    font-size: 1rem;
+  }
+
+  .pub-authors,
+  .pub-venue {
+    font-size: 0.92rem;
+  }
+}

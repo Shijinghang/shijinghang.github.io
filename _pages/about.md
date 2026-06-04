@@ -25,6 +25,15 @@ Selected Updates
 - This website is being customized from the Academic Pages template.
 - Publications, CV, and project pages will be updated as materials are added.
 
+Selected Publications
+======
+
+- **AstroMMBench: A Benchmark for Evaluating Multimodal Large Language Models Capabilities in Astronomy**, arXiv preprint, 2025.
+- **The Mini-SiTian Array: Real-bogus Classification Using Deep Learning**, *Research in Astronomy and Astrophysics*, 2025.
+- **Stellar classification with convolutional neural networks and photometric images**, *Monthly Notices of the Royal Astronomical Society*, 2023.
+
+[View all publications](/publications/)
+
 Contact
 ======
 

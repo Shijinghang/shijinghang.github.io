@@ -5,32 +5,78 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<link rel="stylesheet" href="{{ '/assets/css/publications.css' | relative_url }}">
 
-{% include base_path %}
+<div class="pub-page">
+  <div class="pub-filter-row">
+    <span class="pub-filter-plus" aria-hidden="true">+</span>
+    <label class="screen-reader-text" for="pub-filter">Filter publications</label>
+    <input id="pub-filter" class="pub-filter" type="search" placeholder="Type to filter" autocomplete="off">
+  </div>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+  {% assign publications_by_year = site.publications | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
+  {% for year_group in publications_by_year %}
+    <section class="pub-year-group" data-pub-year="{{ year_group.name }}">
+      <div class="pub-year-rule">
+        <span class="pub-year">{{ year_group.name }}</span>
+      </div>
+
+      {% for post in year_group.items %}
+        {% assign searchable = post.title | append: ' ' | append: post.authors | append: ' ' | append: post.venue | append: ' ' | append: year_group.name %}
+        <article class="pub-item" data-pub-item data-pub-search="{{ searchable | strip_html | downcase | escape }}">
+          <a class="pub-thumb-link" href="{{ post.paperurl | default: post.doiurl | default: post.arxivurl | default: post.url }}" aria-label="{{ post.title }}">
+            {% if post.thumbnail %}
+              <img class="pub-thumb" src="{{ post.thumbnail | relative_url }}" alt="">
+            {% else %}
+              <span class="pub-thumb pub-thumb-fallback">{{ year_group.name }}</span>
+            {% endif %}
+          </a>
+
+          <div class="pub-body">
+            <h2 class="pub-title">
+              <a href="{{ post.paperurl | default: post.doiurl | default: post.arxivurl | default: post.url }}">{{ post.title }}</a>
+            </h2>
+            {% if post.authors %}
+              <p class="pub-authors">{{ post.authors }}</p>
+            {% endif %}
+            <p class="pub-venue"><em>{{ post.venue }}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
+
+            <div class="pub-links">
+              {% if post.doiurl %}
+                <a href="{{ post.doiurl }}">DOI</a>
+              {% endif %}
+              {% if post.arxivurl %}
+                <a href="{{ post.arxivurl }}">arXiv</a>
+              {% endif %}
+              {% if post.paperurl and post.paperurl != post.doiurl and post.paperurl != post.arxivurl %}
+                <a href="{{ post.paperurl }}">Paper</a>
+              {% endif %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </section>
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+</div>
 
+<script>
+  (function () {
+    var input = document.getElementById('pub-filter');
+    if (!input) return;
 
+    input.addEventListener('input', function () {
+      var query = input.value.trim().toLowerCase();
+      var groups = document.querySelectorAll('[data-pub-year]');
 
+      groups.forEach(function (group) {
+        var visibleCount = 0;
+        group.querySelectorAll('[data-pub-item]').forEach(function (item) {
+          var matches = !query || item.getAttribute('data-pub-search').indexOf(query) !== -1;
+          item.hidden = !matches;
+          if (matches) visibleCount += 1;
+        });
+        group.hidden = visibleCount === 0;
+      });
+    });
+  })();
+</script>
