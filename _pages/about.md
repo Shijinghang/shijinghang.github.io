@@ -11,40 +11,15 @@ redirect_from:
 
 <section class="home-hero" id="about">
   <div class="home-hero__copy">
-    <p class="home-kicker">About</p>
     <h1>Jinghang Shi</h1>
-    <p class="home-tagline">AI for Science | LLMs | AI Agents</p>
-
     <p>
       I am a Ph.D. student at the
-      <strong>National Astronomical Observatories, Chinese Academy of Sciences</strong>
-      and the <strong>University of Chinese Academy of Sciences</strong>, advised by
-      Prof. <a href="https://people.ucas.ac.cn/~zyx#%20184221">Yanxia Zhang</a>.
-      I am also a member of the Artificial Intelligence Working Group at NAOC.
-    </p>
-
-    <p>
-      My research focuses on <strong>AI for Science in astronomy</strong>. I develop
-      AI systems that can learn from, align, and reason over heterogeneous astronomical
-      data, including images, spectra, catalogs, and scientific text. Astronomy provides
-      a demanding testbed for building reliable AI methods: models must handle noisy
-      observations, sparse labels, large-scale surveys, and conclusions that should be
-      grounded in measurable physical evidence.
-    </p>
-
-    <p>
-      My current work centers on <strong>large language models</strong>,
-      <strong>multimodal large language models</strong>, and <strong>AI agents</strong>
-      for astronomical research. I am interested in foundation-model training,
-      multimodal alignment, instruction data construction, scientific model evaluation,
-      and agentic workflows that help turn complex observations into interpretable
-      scientific reasoning.
-    </p>
-
-    <p>
-      I am currently open to research and engineering opportunities in
-      <strong>LLM algorithms</strong>, <strong>multimodal AI</strong>,
-      <strong>AI agents</strong>, and <strong>AI for Science</strong>.
+  <strong>National Astronomical Observatories, Chinese Academy of Sciences</strong>, advised by
+  Prof. <a href="https://people.ucas.ac.cn/~zyx#%20184221">Yanxia Zhang</a>. 
+  My research focuses on <strong>AI for Science in astronomy</strong>, 
+  with an emphasis on <strong>multimodal large language models</strong>
+  and <strong>AI agents</strong>. My current work involves building AI systems that learn from heterogeneous astronomical data, including images, spectra, catalogs, and scientific text, and support reliable, evidence-grounded scientific reasoning. I am currently open to research and engineering opportunities in
+<strong>LLM and multimodal AI algorithms</strong>.
     </p>
   </div>
 
@@ -54,20 +29,10 @@ redirect_from:
 </section>
 
 <section class="home-section" id="contact">
-  <h2>contact</h2>
-
   <div class="contact-grid">
     <div>
       <span class="contact-label">Email</span>
-      <a href="mailto:shijinghang66@gmail.com">shijinghang66@gmail.com</a>
-    </div>
-    <div>
-      <span class="contact-label">Advisor</span>
-      <a href="https://people.ucas.ac.cn/~zyx#%20184221">Prof. Yanxia Zhang</a>
-    </div>
-    <div>
-      <span class="contact-label">Affiliation</span>
-      <span>NAOC, CAS · UCAS</span>
+      <a href="mailto:shijinghang66@gmail.com">Email</a>
     </div>
     <div>
       <span class="contact-label">Links</span>
