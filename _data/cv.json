@@ -1,15 +1,15 @@
 {
   "basics": {
-    "name": "Shijinghang",
-    "email": "",
+    "name": "Jinghang Shi",
+    "email": "shijinghang66@gmail.com",
     "phone": "",
     "website": "https://shijinghang.github.io",
-    "summary": "Astronomy and AI researcher.",
+    "summary": "Ph.D. student at the University of Chinese Academy of Sciences working on AI for Science, multimodal large language models, and AI agents for astronomical research.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "",
-      "countryCode": "",
+      "city": "Beijing",
+      "countryCode": "CN",
       "region": ""
     },
     "profiles": [
@@ -17,24 +17,79 @@
         "network": "GitHub",
         "username": "Shijinghang",
         "url": "https://github.com/Shijinghang"
+      },
+      {
+        "network": "ResearchGate",
+        "username": "Shi-Jinghang",
+        "url": "https://www.researchgate.net/profile/Shi-Jinghang"
       }
     ]
   },
-  "work": [],
-  "education": [],
-  "skills": [
+  "work": [
     {
-      "name": "Research interests",
-      "keywords": [
-        "Astronomy",
-        "Astrophysical data analysis",
-        "AI-assisted scientific workflows",
-        "Machine learning"
+      "name": "Zhejiang Lab",
+      "position": "Large Model Algorithm Intern, AstroOne Astronomy Foundation Model Project",
+      "startDate": "2024-08",
+      "endDate": "2025-05",
+      "summary": "Worked on astronomy foundation model data construction, multimodal benchmark development, model evaluation, and AstroOne-VL training.",
+      "highlights": [
+        "Built data processing pipelines that produced approximately 31B tokens and 9M image-text pairs.",
+        "Constructed AstroMMBench with 621 high-quality astronomy multimodal questions.",
+        "Evaluated 25 VLMs and contributed to SFT/DPO/GRPO training analysis.",
+        "Supported an approximately 38% improvement over the InternVL2-76B baseline on AstroMMBench."
       ]
     }
   ],
+  "education": [
+    {
+      "institution": "University of Chinese Academy of Sciences",
+      "area": "Astronomical Technology and Methods, AI for Science",
+      "studyType": "Ph.D.",
+      "startDate": "2024-08",
+      "endDate": "Present",
+      "gpa": null,
+      "courses": []
+    },
+    {
+      "institution": "Hebei University of Technology",
+      "area": "Electronic Information Engineering",
+      "studyType": "M.S.",
+      "startDate": "2020-08",
+      "endDate": "2023-07",
+      "gpa": null,
+      "courses": []
+    },
+    {
+      "institution": "Dalian Neusoft University of Information",
+      "area": "Electronic Information Engineering",
+      "studyType": "B.S.",
+      "startDate": "2016-09",
+      "endDate": "2020-07",
+      "gpa": null,
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "Large Language Models",
+      "keywords": ["SFT", "DPO", "GRPO", "LoRA", "MLLM data construction", "automated evaluation"]
+    },
+    {
+      "name": "Multimodal AI and AI Agents",
+      "keywords": ["multimodal representation learning", "scientific benchmark construction", "tool calling", "evidence-grounded reasoning"]
+    },
+    {
+      "name": "Engineering",
+      "keywords": ["Python", "PyTorch", "Linux", "Git", "Data-Juicer", "Transformers", "MS-Swift", "VLMEvalKit", "LMDB"]
+    }
+  ],
   "languages": [],
-  "interests": [],
+  "interests": [
+    {
+      "name": "Research interests",
+      "keywords": ["AI for Science", "LLM algorithms", "multimodal AI", "AI agents", "astronomical data analysis"]
+    }
+  ],
   "references": [],
   "publications": [],
   "presentations": [],
